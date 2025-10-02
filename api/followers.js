@@ -8,8 +8,8 @@ export default async function handler(req, res) {
   }
 
   try {
-    // Endpoint Roblox
-    const apiUrl = `https://users.roblox.com/v1/users/${encodeURIComponent(id)}/followers/count`;
+   
+    const apiUrl = `https://friends.roblox.com/v1/users/${encodeURIComponent(id)}/followers/count`;
     const r = await fetch(apiUrl);
 
     if (!r.ok) {
@@ -18,7 +18,7 @@ export default async function handler(req, res) {
 
     const data = await r.json();
 
-    // Réponse avec CORS
+    
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Content-Type", "application/json");
 
