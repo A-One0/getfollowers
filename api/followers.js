@@ -13,7 +13,7 @@ export default async function handler(req, res) {
     const r = await fetch(apiUrl);
 
     if (!r.ok) {
-      return res.status(502).json({ error: "Upstream error", status: r.status });
+      return res.status(502).json({ error: "Upstream error 2", status: r.status });
     }
 
     const data = await r.json();
