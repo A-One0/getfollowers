@@ -1,0 +1,9 @@
+{
+  "name": "roblox-followers-api",
+  "version": "1.0.0",
+  "main": "api/followers.js",
+  "type": "module",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
