@@ -1,5 +1,5 @@
 const express = require('express');
-const fetch = require('node-fetch'); // si besoin
+const fetch = require('node-fetch'); 
 const app = express();
 
 app.get('/followers/:id', async (req, res) => {
