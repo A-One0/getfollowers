@@ -8,6 +8,9 @@ export default async function handler(req, res) {
   res.setHeader("Access-Control-Allow-Methods", "POST")
   res.setHeader("Access-Control-Allow-Headers", "Content-Type")
 
+  if (!req.body){
+      return res.status(400).json({ error: "Body manquant" })
+  }
   const { method: meth, url, headers: heads, sendBody } = req.body
 
   if (!meth || !url || !heads) {
