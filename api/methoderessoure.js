@@ -17,7 +17,10 @@ export default async function handler(req, res) {
   const meth = body.method
   const url = body.url
   const heads = body.headers
-  const sendBody = body.sendBody
+  if (meth == "POST"){
+    const sendBody = body.sendBody
+  }
+  
 
   if (!id) {
     return res.status(400).json({ error: "Missing userId in request body" });
