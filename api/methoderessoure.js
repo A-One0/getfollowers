@@ -13,7 +13,7 @@ export default async function handler(req, res) {
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
 
-  print(req, req.body)
+  console.log(req, req.body)
   const body = await JSON.parse(req.body);
 
   const meth = body.method
@@ -23,7 +23,7 @@ export default async function handler(req, res) {
     const sendBody = body.sendBody
   }
 
-  print(meth, url, heads)
+  console.log(meth, url, heads)
   
 
   if (!id) {
