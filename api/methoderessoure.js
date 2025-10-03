@@ -8,9 +8,11 @@ export default async function handler(req, res) {
   res.setHeader("Access-Control-Allow-Methods", "POST");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
-  console.log("Body reçu :", req.body); // Devrait être un objet déjà parsé
+  console.log("Body reçu :", req.body);
 
   const { method: meth, url, headers: heads, sendBody } = req.body;
+
+  console.log("Body reçu :", meth, heads, url);
 
   if (!meth || !url || !heads) {
     return res.status(400).json({ error: "Champs requis manquants" });
@@ -35,6 +37,6 @@ export default async function handler(req, res) {
     const data = await r.json();
     return res.status(200).json(data);
   } catch (e) {
-    return res.status(500).json({ error: e.message });
+    return res.status(505).json({ error: e.message });
   }
 }
