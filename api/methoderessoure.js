@@ -20,6 +20,8 @@ export default async function handler(req, res) {
   if (meth == "POST"){
     const sendBody = body.sendBody
   }
+
+  print(meth, url, heads)
   
 
   if (!id) {
