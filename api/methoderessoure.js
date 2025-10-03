@@ -12,7 +12,7 @@ export default async function handler(req, res) {
   res.setHeader("Access-Control-Allow-Methods", "POST");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
-  const body = JSON.parse(req.body);
+  const body = await JSON.parse(req.body);
 
   const meth = body.method
   const url = body.url
