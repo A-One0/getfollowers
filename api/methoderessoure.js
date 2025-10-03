@@ -13,7 +13,9 @@ export default async function handler(req, res) {
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
 
-  console.log(req, req.body)
+  console.log(req)
+  console.log(req.body)
+  /*
   const body = await JSON.parse(req.body);
 
   const meth = body.method
@@ -57,4 +59,5 @@ export default async function handler(req, res) {
   } catch (e) {
     res.status(500).json({ error: e.message });
   }
+  */
 }
