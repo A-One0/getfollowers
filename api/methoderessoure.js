@@ -8,11 +8,9 @@ export default async function handler(req, res) {
   res.setHeader("Access-Control-Allow-Methods", "POST");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
-  console.log("Body reçu :", req.body);
-
   const { method: meth, url, headers: heads, sendBody } = req.body;
 
-  console.log("Body reçu :", meth, heads, url);
+  console.log(typeof(meth), typeof(utl), typeof(heads);
 
   if (!meth || !url || !heads) {
     return res.status(400).json({ error: "Champs requis manquants" });
