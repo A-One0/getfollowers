@@ -14,6 +14,7 @@ export default async function handler(req, res) {
   let bd
 
   for(i in req.body){
+    console.log(i)
     bd = i
   }
 
