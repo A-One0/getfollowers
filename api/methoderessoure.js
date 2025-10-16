@@ -11,16 +11,13 @@ export default async function handler(req, res) {
   if (!req.body){
       return res.status(400).json({ error: "Body manquant" })
   }
-  let bd
-
-  console.log(req.body)
+  let bdy
 
   for(let i in req.body){
-    console.log(i)
     bd = i
   }
 
-  console.log(bd, typeof(bd))
+  const bd = JSON.parse(bdy)
 
   const meth = bd.method
   const url = bd.url
