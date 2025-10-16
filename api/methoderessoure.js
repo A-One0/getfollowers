@@ -11,9 +11,14 @@ export default async function handler(req, res) {
   if (!req.body){
       return res.status(400).json({ error: "Body manquant" })
   }
-  const { method: meth, url, headers: heads, sendBody } = JSON.parse(req.body)
+  const bd = JSON.parse(req.body)
 
-  console.log(req.body)
+  console.log(bd)
+
+  const meth = bd.method
+  const url = bd.url
+  const heads = bd.headers
+  
 
   if (!meth || !url || !heads) {
     return res.status(400).json({ error: `Champs manquant : ${meth}, ${url}, ${heads}` })
