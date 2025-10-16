@@ -14,7 +14,7 @@ export default async function handler(req, res) {
   let bdy
 
   for(let i in req.body){
-    bd = i
+    bdy = i
   }
 
   const bd = JSON.parse(bdy)
