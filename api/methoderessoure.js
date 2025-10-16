@@ -13,7 +13,7 @@ export default async function handler(req, res) {
   }
   const bd = req.body
 
-  console.log(req.body, req.bosy.json())
+  console.log(req.body, typeof(req.body))
 
   const meth = bd.method
   const url = bd.url
