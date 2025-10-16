@@ -22,6 +22,8 @@ export default async function handler(req, res) {
   const meth = bd.method
   const url = bd.url
   const heads = bd.headers
+
+  console.log(meth, url, heads)
   
 
   if (!meth || !url || !heads) {
