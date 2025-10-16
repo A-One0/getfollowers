@@ -11,9 +11,9 @@ export default async function handler(req, res) {
   if (!req.body){
       return res.status(400).json({ error: "Body manquant" })
   }
-  const bd = JSON.parse(req.body)
+  const bd = req.body
 
-  console.log(bd)
+  console.log(req.body, req.bosy.json())
 
   const meth = bd.method
   const url = bd.url
