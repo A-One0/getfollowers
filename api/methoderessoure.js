@@ -15,7 +15,7 @@ export default async function handler(req, res) {
 
   console.log(req.body)
 
-  for(i in req.body){
+  for(let i in req.body){
     console.log(i)
     bd = i
   }
