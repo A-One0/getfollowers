@@ -13,6 +13,8 @@ export default async function handler(req, res) {
   }
   let bd
 
+  console.log(req.body)
+
   for(i in req.body){
     console.log(i)
     bd = i
