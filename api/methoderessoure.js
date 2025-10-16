@@ -33,7 +33,7 @@ export default async function handler(req, res) {
   try {
     const options = {
       method: meth,
-      headers: await JSON.parse(heads),
+      headers: heads,
     }
 
     if (meth === "POST") {
